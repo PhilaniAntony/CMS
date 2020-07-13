@@ -1,0 +1,30 @@
+<h3> Register </div>
+
+<form method="POST" action= "">
+   <div class="input-group mb-3">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-user"></i>{{form.username.label}}</span>
+							</div>
+							 {{form.username}}
+						</div>
+						<div class="input-group mb-2">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-envelope-square"></i>{{form.email.label}}</span>
+							</div>
+							{{form.email}}
+						</div>
+						<div class="input-group mb-2">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-key"></i>{{form.password1.label}}</span>
+							</div>
+							{{form.password1}}
+						</div>
+						<div class="input-group mb-2">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-key"></i>{{form.password2.label}}</span>
+							</div>
+							{{form.password2}}
+						</div>
+    
+    <input type='submit' name="createUser"> 
+</form>
