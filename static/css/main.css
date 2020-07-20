@@ -91,3 +91,8 @@ a.navbar-brand {
     font-family: 'Poppins';
     font-size: 25;
 }
+
+.hello-msg {
+    font-size: 18px;
+    color: #fff;
+    margin-right: 20px}
