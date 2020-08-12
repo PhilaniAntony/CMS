@@ -1,8 +1,24 @@
 /*#logo {}*/
-@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap');
+
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+}
 
 body {
     background-color: #ebeff5;
+    /*font-family: 'Lato', sans-serif;*/
+    font-family: 'Poppins', sans-serif;
+}
+
+a.navbar-brand {
+    font-family: 'Poppins';
+    font-size: 25;
+    color: red;
 }
 
 #total-orders {
@@ -18,13 +34,7 @@ body {
 }
 
 
-body,
-html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
 
-}
 
 .user_card {
     width: 350px;
@@ -41,6 +51,13 @@ html {
     -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 5px;
 
+}
+
+.profile-pic {
+    max-width: 200px;
+    max-height: 200px;
+    margin: 0 auto;
+    border-radius: 50%;
 }
 
 .form_container {
@@ -87,12 +104,10 @@ html {
     margin-top: 10px;
 }
 
-a.navbar-brand {
-    font-family: 'Poppins';
-    font-size: 25;
-}
+
 
 .hello-msg {
     font-size: 18px;
     color: #fff;
-    margin-right: 20px}
+    margin-right: 20px
+}
