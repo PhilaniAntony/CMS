@@ -25,7 +25,7 @@ SECRET_KEY = '2qjc6&0!ljet@q&7i--#6n=c1!z@*fwdyg=eq=g2%5e99h_8ca'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://git.heroku.com/pandadash.git', '127.0.0.1:8000']
+ALLOWED_HOSTS = ['pandadash.herokuapp.com/', '127.0.0.1:8000']
 
 
 # Application definition
