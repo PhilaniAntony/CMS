@@ -25,7 +25,7 @@ SECRET_KEY = '2qjc6&0!ljet@q&7i--#6n=c1!z@*fwdyg=eq=g2%5e99h_8ca'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [ 'git.heroku.com/damp-harbor-50785.git', '127.0.0.1']
 
 
 # Application definition
