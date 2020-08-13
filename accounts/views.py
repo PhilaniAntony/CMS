@@ -22,9 +22,9 @@ def register_view(request):
         if form.is_valid() :   
             user = form.save()
             username = form.cleaned_data('username')
-            #group = Group.objects.get(name='customer')
-            #user.groups.add(group)
-            #Customer.objects.create(user = user)
+            group = Group.objects.get(name='admin')
+            user.groups.add(group)
+            Customer.objects.create(user = user)
             messages.success(request, f'Account was created for {username}')
                 
             return redirect('login')  

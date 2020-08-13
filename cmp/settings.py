@@ -80,12 +80,13 @@ WSGI_APPLICATION = 'cmp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd31b63ubavv8jc',
-        'HOST' : 'ec2-34-238-26-109.compute-1.amazonaws.com',
-        'PORT' : 5432,
-        'USER' : 'ushouurcurwnij',
-        'PASSWORD' : '5e6233f74a516e65c5e23aafeb25948c68e78ae136b36b9811a9b5db85386221',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        #'NAME': 'd31b63ubavv8jc',
+        #'HOST' : 'ec2-34-238-26-109.compute-1.amazonaws.com',
+        #'PORT' : 5432,
+        #'USER' : 'ushouurcurwnij',
+        #'PASSWORD' : '5e6233f74a516e65c5e23aafeb25948c68e78ae136b36b9811a9b5db85386221',
     }
 }
 
