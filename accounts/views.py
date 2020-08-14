@@ -27,7 +27,7 @@ def register_view(request):
             Customer.objects.create(user = user)
             messages.success(request, f'Account was created for {username}')
                 
-            return redirect('login')  
+            return redirect('accounts:login')  
     context={
         'form' : form
     }
@@ -54,7 +54,7 @@ def login_view(request):
 #logout View for cautomer
 def log_out(request):
     logout(request)
-    return redirect('login')
+    return redirect('accounts:login')
 
 
 
@@ -160,7 +160,7 @@ def create_Order (request,pk) :
         formset = OrderFormSet(request.POST, instance= customer)
         if formset.is_valid():
             formset.save()
-            return redirect('home')
+            return redirect('accounts:home')
     context = {
       'formset'  :formset,
     
@@ -178,7 +178,7 @@ def update_Order (request, pk):
         form = OrderForm(request.POST, instance=order)
         if form.is_valid():
             form.save()
-            return redirect('home')
+            return redirect('accounts:home')
     context ={ 'form': form}
     return render(request, 'accounts/order_form.html', context)
     
@@ -191,7 +191,7 @@ def delete_Order (request, pk) :
     order = Order.objects.get(id=pk)
     if request.POST == 'POST':
         order.delete()
-        return redirect('home')
+        return redirect('accounts:home')
     context={
         'item' : order
     }
