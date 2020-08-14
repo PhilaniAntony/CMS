@@ -1,7 +1,7 @@
 {% load static %}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="{% url 'home' %}">Panda</a>
+    <a class="navbar-brand" href="{% url 'accounts:home' %}">Panda</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -9,14 +9,14 @@
     <ul class="navbar-nav ml-auto">
       {% if request.user.is_staff  %}
       <li class="nav-item active">
-        <a class="nav-link" href="{% url 'home' %}">Dashboard <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'accounts:home' %}">Dashboard <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{% url 'products' %}">Products</a>
+        <a class="nav-link" href="{% url 'accounts:products' %}">Products</a>
       </li>
       {% else %}
       <li class="nav-item">
-           <a class="nav-link" href="{% url 'account' %}">
+           <a class="nav-link" href="{% url 'accounts:account' %}">
            Setting
            </a>
       </li>
@@ -26,6 +26,6 @@
   </div>
   <span class="hello-msg" >{{request.user}}</span>
    <span > 
-    <a class="hello-msg" href="{%url 'logout' %}"><span class="lnr lnr-exit"></span></a>
+    <a class="hello-msg" href="{%url 'accounts:logout' %}"><span class="lnr lnr-exit"></span></a>
    </span>
 </nav>

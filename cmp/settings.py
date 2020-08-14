@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+#import environ
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -39,6 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #Accounts App
     'accounts.apps.AccountsConfig',
+    'shopapi.apps.ShopapiConfig',
+    #rest_framwork
+    'rest_framework',
+    #django_filters
     'django_filters',
     
 ]
@@ -75,6 +80,20 @@ TEMPLATES = [
 WSGI_APPLICATION = 'cmp.wsgi.application'
 
 
+
+#local env
+
+
+#env = environ.Env(
+    # set casting, default value
+    #DEBUG=(bool, False)
+#)
+# reading .env file
+#environ.Env.read_env()
+
+# False if not in os.environ
+#DEBUG = env('DEBUG')
+
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
@@ -82,13 +101,21 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        #'NAME': 'd31b63ubavv8jc',
-        #'HOST' : 'ec2-34-238-26-109.compute-1.amazonaws.com',
-        #'PORT' : 5432,
-        #'USER' : 'ushouurcurwnij',
-        #'PASSWORD' : '5e6233f74a516e65c5e23aafeb25948c68e78ae136b36b9811a9b5db85386221',
+        #'NAME': env('DATABASE_NAME')
+        #'HOST' : env('DATABASE_HOST')
+        #'PORT' : env('DATABASE_PORT')
+        #'USER' : env('DATABASE_USER')
+        #'PASSWORD' : env('DATABASE_PASSWORD')
     }
 }
+
+#SMTP Configuration
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+#EMAIL_HOST = env('EMAIL_HOST')
+#EMAIL_PORT = env('EMAIL_PORT')
+#EMAIL_USE_TLS = True
+#EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+#EMAIL_HOST_PASSWORD =env('EMAIL_HOST_PASSWORD')
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -126,13 +153,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-#SMTP Configuration
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = '587'
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'iamturnaog@gmail.com'
-EMAIL_HOST_PASSWORD ='**********'
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [

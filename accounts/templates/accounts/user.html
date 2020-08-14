@@ -33,10 +33,10 @@
                 <td>{{order.date_created}}</td>
                 <td>{{order.status}}</td>
                <td>
-               <a href="{% url 'updateorder' order.id %}" class="btn btn-sm btn-info" href=""> Upadate</a>  
+               <a href="{% url 'accounts:updateorder' order.id %}" class="btn btn-sm btn-info" href=""> Upadate</a>  
               </td>
               <td>
-              <a href="{% url 'deleteorder' order.id %}" class="btn btn-sm btn-danger" href=""> Delete</a>  
+              <a href="{% url 'accounts:deleteorder' order.id %}" class="btn btn-sm btn-danger" href=""> Delete</a>  
               </td>
             </tr>
             {% endfor %}

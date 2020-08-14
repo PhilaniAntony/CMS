@@ -21,7 +21,7 @@
           {% for customer in customers %}
             <tr>
               <td>
-                <a  class="btn btn-sm btn-info"href="{% url 'customer' customer.id %}">
+                <a  class="btn btn-sm btn-info"href="{% url 'accounts:customer' customer.id %}">
                 View
                 </a>
               </td>
@@ -61,10 +61,10 @@
               {{order.status}}    
               </td>
               <td>
-              <a href="{% url 'updateorder' order.id %}" class="btn btn-sm btn-info" href=""> Update</a>  
+              <a href="{% url 'accounts:updateorder' order.id %}" class="btn btn-sm btn-info" href=""> Update</a>  
               </td>
               <td>
-              <a href="{% url 'deleteorder' order.id %}" class="btn btn-sm btn-danger" href=""> Delete</a>  
+              <a href="{% url 'accounts:deleteorder' order.id %}" class="btn btn-sm btn-danger" href=""> Delete</a>  
               </td>
             </tr>
           {% endfor %}
